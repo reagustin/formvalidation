@@ -89,6 +89,8 @@ class _ProductoPageState extends State<ProductoPage> {
   }
 
   void _submit() {
-    formKey.currentState.validate();
+    if (!formKey.currentState.validate()) return;
+
+    print('todo ok');
   }
 }
